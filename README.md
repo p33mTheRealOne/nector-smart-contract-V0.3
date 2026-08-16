@@ -1,24 +1,33 @@
-# Nector Smart Contract V0.2
+# Nector Smart Contract V0.3
 
 ## Overview
 
-Nector Smart Contract V0.2 is the latest version of Nector's deterministic, non-custodial escrow protocol built on Solana.
+Nector Smart Contract V0.3 is the latest version of Nector's deterministic, non-custodial escrow protocol built on Solana.
+
+V0.3 introduces NFT trading with escrow protection, allowing users to buy and sell NFTs through Nector without the usual buyer or seller bond.
 
 ## What's New?
 
-### Penalties Are Burned
+### NFT Trading With Escrow Protection
 
-Penalty funds are no longer sent to the Nector platform. Instead, they are permanently burned.
+Nector V0.3 adds support for NFT trading with escrow protection.
 
-### Revenue Comes From Fees
+Buyers can fund an NFT purchase through the escrow contract while the seller is required to fulfill the trade according to the predefined deal conditions.
 
-Nector generates protocol revenue through predefined escrow fees rather than user penalties.
+### No Buyer/Seller Bond for NFT Trades
 
-### No Incentive to Create Penalties
+Unlike physical product escrow, NFT trades do not require the usual buyer or seller bond.
 
-The new economic model removes the platform's financial incentive to benefit from disputes, timeouts, or other penalty-triggering outcomes.
+This makes NFT transactions simpler while still keeping the funds protected by the escrow smart contract.
 
-## Prerequites
+### Simple NFT Trading Flow
+
+Nector is designed to make NFT trading as simple as possible.
+
+The buyer and seller can create a deal, lock the required funds in escrow, and complete the transaction through predefined smart contract rules without relying on a traditional middleman.
+
+## Prerequisites
+
 Install Rust, the Solana CLI, and Anchor Framework on Windows (WSL), Linux, or Mac.
 
 https://www.anchor-lang.com/docs/installation
@@ -46,13 +55,13 @@ solana-keygen new
 solana airdrop 5
 
 # Check your wallet's SOL balance:
-solana balance # If it show 5 you good to go!
+solana balance # If it shows 5, you're good to go!
 ```
 
 Prepare the project
 ```bash
 # Clone repo:
-git clone https://github.com/p33mTheRealOne/nector-smart-contract-V0.2
+git clone https://github.com/p33mTheRealOne/nector-smart-contract-V0.3
 
 # Install node modules
 yarn
@@ -84,12 +93,12 @@ solana config set --url devnet
 solana balance
 
 # Deploy program to devnet 
-solana program deploy target/deploy/nector_smart_contract_V0_2.so
+solana program deploy target/deploy/nector_smart_contract_V0_3.so
 ```
 
 ### Test
 
-https://github.com/p33mTheRealOne/nector-smart-contract-V0.2/tree/main/tests/how_to_use
+https://github.com/p33mTheRealOne/nector-smart-contract-V0.3/tree/main/tests/how_to_use
 
 # Learn more:
 https://nector.chat/docs
